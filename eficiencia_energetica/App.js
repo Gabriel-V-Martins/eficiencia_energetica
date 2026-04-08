@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context"; //npx expo install react-native-safe-area-context
 import { StyleSheet, Text, View, ImageBackground, Switch } from "react-native";
-import Slider from "@react-native-community/slider";
+import Slider from "@react-native-community/slider"; //npm install @react-native-community/slider --save
 
 export default function App() {
   const [disjuntor, setDisjuntor] = useState(false);
@@ -32,6 +32,7 @@ export default function App() {
         >
           <View style={styles.overlay}>
             <Text style={styles.titulo}> Controle de iluminação</Text>
+            
             <View style={styles.disjuntor}>
               <Text>Disjuntor de Iluminação: </Text>
               <Switch
@@ -40,10 +41,12 @@ export default function App() {
                 trackColor={{ false: "#767577", true: "#01a10f" }}
               />
             </View>
+
             <View style={styles.controlador}>
               <Text>Intensidade atual: {disjuntor ? intensidade : "0"}%</Text>
               {slider}
             </View>
+            
           </View>
         </ImageBackground>
       </SafeAreaView>
